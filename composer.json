@@ -1,0 +1,33 @@
+{
+    "name": "codingdelta/influxdb-laravel",
+    "description": "A service made to provide, set up and use the library from influxdata-client-influxphp in Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LGHOFMAN",
+            "email": "mail@leonardohofman.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CodingDelta\\InfluxDB\\": "src/"
+        }
+    },
+    "require": {
+        "influxdata/influxdb-client-php": "^3.1.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CodingDelta\\InfluxDB\\Providers\\ServiceProvider"
+            ],
+            "aliases": {
+                "InfluxDB": "CodingDelta\\InfluxDB\\Facades\\InfluxDB"
+            }
+        }
+   }
+}
