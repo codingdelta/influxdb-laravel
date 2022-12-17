@@ -112,6 +112,12 @@ class FluxQuery
         return $this->query;
     }
 
+    public function sort(array $columns, bool $desc = false): self
+    {
+        $this->query .= ' |> sort(columns: ["' . implode(", ", $columns) . '"], desc: ' . ($desc ? 'true' : 'false') . ')' . PHP_EOL;
+        return $this;
+    }
+
     public function __toString(): string
     {
         return preg_replace('/([\r\n\t])/', '', $this->query);
