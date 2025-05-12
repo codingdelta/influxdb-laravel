@@ -5,3 +5,4 @@ A service made to provide, set up and use the library from influxdata) in Larave
 test
 test
 test
+test
